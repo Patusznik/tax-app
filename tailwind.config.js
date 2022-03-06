@@ -6,18 +6,24 @@ module.exports = {
   },
   plugins: [],
   purge: {
-    content: ["./src/App.svelte"],
-    enabled: production, // disable purge in dev
+    content: ["./src/**/*.svelte"],
+    enabled: false, // disable purge in dev
   },
 
   theme: {
-    colors: {
-      // transparent: 'transparent',
-      // current: 'currentColor',
-      white: "#ffffff",
-      "dark-gray": "#27272a",
-      primary: "#123f69",
-      orange: "#f3a511",
+    extend: {
+      colors: {
+        // transparent: 'transparent',
+        // current: 'currentColor',
+        // white: "#ffffff",
+        // darkGray: "#27272a",
+        // primary: "#123f69",
+        // orange: "#f3a511",
+        // blue: "#1d4ed8",
+        blue: {
+          30: "#123f69",
+        },
+      },
     },
   },
 };

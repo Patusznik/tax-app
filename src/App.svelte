@@ -7,10 +7,10 @@
     FontAwesomeLayersText,
   } from "fontawesome-svelte";
   import Router from "svelte-spa-router";
+  import Navbar from "./components/Navbar.svelte";
   import AboutUs from "./pages/AboutUs.svelte";
 
   import Home from "./pages/Home.svelte";
-
   // library.add(faSmileWink);
   export let name;
 
@@ -31,10 +31,11 @@
 </script>
 
 <main>
+  <Navbar />
   <Router {routes} />
   <FontAwesomeIcon icon={fasSmileWink} />
 
-  <h1 class="py-8 px-4 border border-orange shadow-lg">
+  <h1 class="py-8 px-4 border border-orange shadow-lg bg-primary">
     Hello mau mau {name}!
   </h1>
   <p>
